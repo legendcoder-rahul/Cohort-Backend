@@ -1,3 +1,6 @@
-const catMe = require("cat-me")
+const express = require('express')
 
-console.log(catMe())
+const app = express() //server create ho gya h
+
+
+app.listen(3000)// server ko start karta ha
