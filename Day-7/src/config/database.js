@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
-const app = require('./src/app')
-require('dotenv').config()
 
 function connectDB(){
     mongoose.connect(process.env.MONGO_URI)
@@ -9,9 +7,5 @@ function connectDB(){
         
     })
 }
-connectDB()
 
-app.listen(3000,()=>{
-    console.log("server is running on port 3000");
-    
-})
+module.exports = connectDB
