@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const noteModel = require("./models/note.model")
 const cors = require('cors')
+const path = require('path')
 
 app.use(cors())
 app.use(express.json())
@@ -56,7 +57,9 @@ app.patch('/api/notes/:id', async (req, res) => {
     }
 })
 
-
+app.use('*name',(req,res)=>{
+    res.sendFile(path.join(_dirname, '..', '/public/index.html'))
+})
 
 
 module.exports = app
