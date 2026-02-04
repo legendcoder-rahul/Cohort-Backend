@@ -36,20 +36,26 @@ app.delete('/api/notes/:id', async (req, res) => {
     console.log(id)
     res.status(200).json({
         message: 'note delete successfully',
-        notes
     })
 })
+app.patch('/api/notes/:id', async (req, res) => {
+    try {
+        const { id } = req.params
+        const updatedNote = await noteModel.findByIdAndUpdate(
+            id,
+            req.body,
+            { new: true }
+        )
 
-app.patch('/api/notes/:id', async(req, res) => {
-    const id = req.params.id
-    const { description } = req.body
-
-    await noteModel.findByIdAndUpdate(id, { description })
-
-    res.status(200).json({
-        message:'notes update',
-    })
+        res.status(200).json({
+            success: true,
+            note: updatedNote
+        })
+    } catch (error) {
+        res.status(500).json({ error: "Update failed" })
+    }
 })
+
 
 
 
