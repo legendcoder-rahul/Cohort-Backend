@@ -2,11 +2,19 @@ const express = require('express')
 const app = express()
 const noteModel = require("./models/note.model")
 const cors = require('cors')
-const path = require('path')
+const authRouter = require('./routes/auth.routes')
+const cookieParser = require("cookie-parser")
 
-app.use(cors())
+app.use(cookieParser())
+
+
+app.use(cors({
+    origin: "http://localhost:5173",   // frontend ka exact port
+    credentials: true
+}))
 app.use(express.json())
 app.use(express.static('./public'))
+app.use('/api/auth',authRouter)
 
 app.post('/api/notes', async (req, res) => {
     const { title, description } = req.body
@@ -57,9 +65,9 @@ app.patch('/api/notes/:id', async (req, res) => {
     }
 })
 
-app.use('*name',(req,res)=>{
-    res.sendFile(path.join(_dirname, '..', '/public/index.html'))
-})
+// app.use('*name',(req,res)=>{
+//     res.sendFile(path.join(_dirname, '..', '/public/index.html'))
+// })
 
 
 module.exports = app

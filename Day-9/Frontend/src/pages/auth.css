@@ -1,0 +1,146 @@
+* {
+    color: white;
+}
+
+.loginContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginContainer h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.loginContainer form input {
+    height: 40px;
+    width: 80%;
+    margin-top: 20px;
+    background: transparent;
+    outline: none;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 25px;
+    background: orangered;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 80%;
+    font-size: 16px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+hr {
+    height: 1px;
+    width: 90%;
+    margin-top: 20px;
+    border: 0.2px solid gray;
+}
+
+.Register {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.Register span {
+    color: chocolate;
+}
+
+.or {
+    padding-block: 10px;
+}
+
+.google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgb(51, 50, 50);
+    width: 80%;
+    height: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.google img {
+    height: 25px;
+}
+
+.google button {
+    background: transparent;
+    display: flex;
+    border: none;
+
+}
+
+.RegisterContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.RegisterContainer h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+form {
+    width: 100%;
+}
+
+.RegisterContainer form .name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.RegisterContainer form .name label {
+    font-size: 16px;
+
+}
+
+.RegisterContainer form .name input {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 25px;
+    background: orangered;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 80%;
+    font-size: 16px;
+    transition: all 0.5 ease-in;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
